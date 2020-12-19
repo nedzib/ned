@@ -21,6 +21,73 @@ body {
     width: 100%;
 }
 
+/* fa */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 70px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+/* Hackster */
+
+.hackster{
+    padding: 30px;
+    font-size: 0.5px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/logos/hackster_logo.png) no-repeat center ;
+    -webkit-background-size:  cover;
+    -moz-background-size:  cover;
+    -o-background-size:  cover;
+    background-size:  cover;
+    text-align: center;
+    text-decoration: none;
+}
+
+.linkedin{
+    padding: 30px;
+    font-size: 0.5px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/logos/linkedin_logo.png) no-repeat center ;
+    -webkit-background-size:  cover;
+    -moz-background-size:  cover;
+    -o-background-size:  cover;
+    background-size:  cover;
+    text-align: center;
+    text-decoration: none;
+}
+
+.twitter{
+    padding: 30px;
+    font-size: 0.5px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/logos/Twitter-Logo.png) no-repeat center ;
+    -webkit-background-size:  cover;
+    -moz-background-size:  cover;
+    -o-background-size:  cover;
+    background-size:  cover;
+    text-align: center;
+    text-decoration: none;
+}
+
+.github{
+    padding: 30px;
+    font-size: 0.5px;
+    width: 50px;
+    height: 50px;
+    background: url(../images/logos/github_logo.png) no-repeat center ;
+    -webkit-background-size:  cover;
+    -moz-background-size:  cover;
+    -o-background-size:  cover;
+    background-size:  cover;
+    text-align: center;
+    text-decoration: none;
+}
 
 /* Basic */
 
@@ -157,7 +224,7 @@ html {
 }
 
 .menu .social-network {
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center;
 }
 
