@@ -24,9 +24,9 @@ body {
 /* fa */
 
 .fa {
-    padding: 20px;
     font-size: 30px;
     width: 70px;
+    display: flex;
     text-align: center;
     text-decoration: none;
   }
