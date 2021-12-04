@@ -1,0 +1,38 @@
+<div class="w-full bg-white flex flex-row items-center justify-between sticky top-0 z-50" style="height: 80px" >
+    <div (click)="onClick('home')">
+        <img src="../../../../assets/images/Logo_long.png" class="ml-20 cursor-pointer select-none hidden lg:block" style="height: 50px">
+        <img src="../../../../assets/images/Logo_short.png" class="ml-20 cursor-pointer select-none visible lg:hidden" style="height: 50px">
+    </div>
+    <div class="mr-20 hidden lg:flex lg:flex-row">
+        <div class="mr-2 cursor-pointer select-none text-secondary hover:text-hover pr-2 border-r" (click)="onClick('home')">
+            {{ this.paramText.home.navButton }}
+        </div>
+        <div class="mr-2 cursor-pointer select-none text-secondary hover:text-hover pr-2 border-r" (click)="onClick('about')">
+            {{ this.paramText.about.navButton }}
+        </div>
+        <div class="mr-2 cursor-pointer select-none text-secondary hover:text-hover pr-2 border-r" (click)="onClick('portfolio')">
+            {{ this.paramText.portfolio.navButton }}
+        </div>
+        <!-- <div class="cursor-pointer select-none text-secondary hover:text-hover pr-2 border-r" (click)="onClick('contact')">
+            {{ this.paramText.contact.navButton }}
+        </div> -->
+    </div>
+
+    <div class="mr-20 flex flex-col visible lg:hidden" (click)="toggle()" (clickOutside)="close()">
+        <i class="fas fa-bars text-4xl text-secondary hover:text-hover select-none"></i>
+        <div class="absolute border bg-white origin-top-right top-16 right-12 align-center items-center z-50" [ngClass]="{'hidden': hideDropdown}">
+            <div class="cursor-pointer select-none text-secondary hover:text-hover mx-1 pt-2 pb border-b text-center" (click)="onClick('home')">
+                {{ this.paramText.home.navButton }}
+            </div>
+            <div class="cursor-pointer select-none text-secondary hover:text-hover mx-1 pt-2 pb border-b text-center" (click)="onClick('about')">
+                {{ this.paramText.about.navButton }}
+            </div>
+            <div class="cursor-pointer select-none text-secondary hover:text-hover mb-1 mx-1 pt-2 pb border-b text-center" (click)="onClick('portfolio')">
+                {{ this.paramText.portfolio.navButton }}
+            </div>
+            <!-- <div class="cursor-pointer select-none text-secondary hover:text-hover mb-1 mx-1 pt-2 pb text-center" (click)="onClick('contact')">
+                {{ this.paramText.contact.navButton }}
+            </div> -->
+        </div>
+    </div>
+</div>

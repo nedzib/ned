@@ -1,0 +1,11 @@
+.backImage{
+    height: auto;
+    background-image: url("../../../../assets/images/bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hackster{
+    filter: invert(26%) sepia(0%) saturate(1430%) hue-rotate(191deg) brightness(95%) contrast(80%);
+}

@@ -1,0 +1,15 @@
+.backImage{
+    height: auto;
+    background-image: url("../../../../assets/images/bg.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hoverPer{
+    filter: invert(27%) sepia(15%) saturate(20%) hue-rotate(358deg) brightness(97%) contrast(88%);
+}
+
+.hoverPer:hover{
+    filter: invert(96%) sepia(83%) saturate(930%) hue-rotate(304deg) brightness(100%) contrast(96%);
+}
