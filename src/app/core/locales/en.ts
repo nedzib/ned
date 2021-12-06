@@ -98,7 +98,7 @@ export let en = {
             label1: "Name:",
             texto1: "Brayan Nedzib Sastoque Rangel",
             label2: "Age:",
-            texto2: "Años",
+            texto2: "Years old",
             label3: "Location:",
             texto3: "Bogotá, Colombia",
             label4: "Contact:",
