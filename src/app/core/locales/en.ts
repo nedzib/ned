@@ -58,11 +58,11 @@ export let en = {
         navButton: "About me",
         columna1: {
             subtitulo1: "Who am i?",
-            texto1: "I am a Colombian, born in a town called Puerto Salgar, I am currently working as a Ruby on Rails developer in Symplifica a company that seeks to formalize the work of domestic workers in a country where several fundamental rights are permeated by bureaucratic processes and defunding. I consider myself a Maker because I like to create things, as a child I wanted to be an inventor and I am being it every day, I studied Electronics Technology at the Universidad Distrital Francisco José de Caldas in Bogota and right now I am a fullstack developer loving rails.",
+            texto1: "I am a Colombian, born in a town called Puerto Salgar. Currently, I work as a Ruby on Rails developer at Buk, a company that aims to address businesses' needs in people management. I consider myself a Maker because I enjoy creating things. As a child, I always aspired to be an inventor, and now I am fulfilling that dream every day. I studied Electronics Technology at Universidad Distrital Francisco José de Caldas in Bogotá, and now I am a passionate full-stack developer with a love for Rails.",
             subtitulo2: "I like...",
-            texto2: "Going out to eat with my girlfriend, web development, open source and open hardware, Maker communities, IoT, Music, multimedia creation and editing, videogames as a hobby and as culture, photography and finally cooking.",
+            texto2: "My life encompasses a variety of interests, from sharing meals with my partner to web development and involvement in Makers communities. I'm also passionate about the Internet of Things, music, video games, photography, and cooking. These activities enrich my life and allow me to continue learning and growing constantly.",
             subtitulo3: "Gestores de Paz Potosí",
-            texto3: "Through human rights and the defense of nature and territory, every Saturday a group of 10 young people in Bogota, make the voice of children heard, we try to encourage children to be the protagonists of social change, making a difference, teaching how the arts, play and friendship can be powerful tools not only to have an alternative to the reality of the locality, but also to build a world with social justice.",
+            texto3: "Every Saturday, a group of 10 young people in Bogotá comes together to amplify the voices of children and advocate for human rights and the protection of nature and territory. We strive to empower children to become agents of social change and make a difference. Through arts, play, and friendship, we showcase the power of these tools, not only as alternatives to the realities in our community but also as means to build a world with social justice.",
             label3: "More info...",
             url3: "https://www.gestoresdepaz.com/",
         },
@@ -90,7 +90,7 @@ export let en = {
         presentacionTitulo: "I'm a Ruby on Rails Developer",
         columna1: {
             subtitulo: "About me",
-            texto: "I am a Colombian Ruby on Rails developer, passionate about technology. I consider myself a Maker because I like to create things, from time to time I upload projects to a community called Hackster and I'm constantly learning about development.",
+            texto: "I am a Colombian Ruby on Rails developer, passionate about technology. I consider myself a Maker because I enjoy creating things. I occasionally upload projects to a community called Hackster, and I am constantly learning about development.",
             botonMas: "LEARN MORE",
         },
         columna2: {

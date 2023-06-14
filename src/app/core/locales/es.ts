@@ -58,11 +58,11 @@ export let es = {
         navButton: "Acerca de mí",
         columna1: {
             subtitulo1: "¿Quién soy?",
-            texto1: "Soy un Colombiano, nacido en un pueblo llamado Puerto Salgar, Actualmente trabajo como desarrollador Ruby on Rails en Symplifica una empresa que busca formalizar el trabajo de empleados y empleadas domesticas en un pais donde varios derechos fundamentales se ven permeados por procesos burocraticos y desfinanciacion. Me considero un Maker porque me gusta crear cosas, de niño queria ser inventor y lo estoy siendo cada dia, Estudié Tecnología en electrónica en la Universidad Distrital Francisco José de Caldas de Bogotá y justo ahora soy un desarrollador fullstack enamorado de rails.",
+            texto1: "Soy colombiano, nacido en un pueblo llamado Puerto Salgar. En la actualidad, trabajo como desarrollador de Ruby on Rails en Buk, una empresa dedicada a solucionar las necesidades de las empresas en la gestión de personal. Me considero un \"Maker\" porque disfruto creando cosas. Desde pequeño, soñaba con ser inventor, y ahora estoy haciendo realidad ese sueño cada día. Estudié Tecnología en Electrónica en la Universidad Distrital Francisco José de Caldas de Bogotá y actualmente soy un apasionado desarrollador fullstack enamorado de Rails.",
             subtitulo2: "Me gusta...",
-            texto2: "Salir a comer con mi pareja, el desarrollo web, el open source y open hardware, las comunidades de Makers, el IoT, la Música, la creación y edición de multimedia, los videojuegos como pasatiempo y como cultura, la fotografia y finalmente la cocina.",
+            texto2: "Mi vida abarca una variedad de intereses, desde compartir comidas con mi pareja hasta el desarrollo web y la participación en comunidades de Makers. También me apasiona el Internet de las cosas, la música, los videojuegos, la fotografía y la cocina. Estas actividades enriquecen mi vida y me permiten seguir aprendiendo y creciendo constantemente.",
             subtitulo3: "Gestores de Paz Potosí",
-            texto3: "A través de los derechos humanos y la defensa de la naturaleza y territorio cada sábado un grupo de 10 jóvenes en Bogotá, hacen que la voz de los de los niños y niñas se escuche, tratamos de incentivar a los niños y niñas para que sean los protagonistas del cambio social, marcando la diferencia, enseñando enseñando como las artes, el juego y la amistad pueden ser herramientas poderosas no solo para tener una alternativa a la realidad de la localidad, sino también para construir un mundo con justicia social.",
+            texto3: "Cada sábado, un grupo de 10 jóvenes en Bogotá se reúne para promover los derechos humanos y la defensa de la naturaleza y el territorio. Buscamos que la voz de los niños y niñas sea escuchada y fomentamos su participación activa para ser protagonistas del cambio social. A través del arte, el juego y la amistad, enseñamos cómo estas herramientas pueden ser poderosas, no solo como alternativas a la realidad de nuestra localidad, sino también para construir un mundo con justicia social.",
             label3: "Ver más...",
             url3: "https://www.gestoresdepaz.com/",
         },
@@ -93,7 +93,7 @@ export let es = {
         presentacionTitulo: "Soy un Desarrollador Ruby on Rails",
         columna1: {
             subtitulo: "Acerca de mí",
-            texto: "Soy un desarrollador Ruby on Rails Colombiano, apasionado por la tecnologia. Me considero un Maker porque me gusta crear cosas, de vez en cuando subo proyectos a una comunidad llamada Hackster y constantemente estoy aprendiendo sobre desarrollo.",
+            texto: "Soy un apasionado desarrollador colombiano especializado en Ruby on Rails. Me considero un \"Maker\" en el mundo tecnológico, ya que disfruto creando cosas nuevas y emocionantes. Regularmente comparto mis proyectos en una vibrante comunidad llamada Hackster y siempre me encuentro en un constante proceso de aprendizaje en el ámbito del desarrollo.",
             botonMas: "APRENDE MÁS",
         },
         columna2: {
