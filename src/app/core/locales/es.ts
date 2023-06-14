@@ -58,7 +58,7 @@ export let es = {
         navButton: "Acerca de mí",
         columna1: {
             subtitulo1: "¿Quién soy?",
-            texto1: "Soy colombiano, nacido en un pueblo llamado Puerto Salgar. En la actualidad, trabajo como desarrollador de Ruby on Rails en Buk, una empresa dedicada a solucionar las necesidades de las empresas en la gestión de personal. Me considero un \"Maker\" porque disfruto creando cosas. Desde pequeño, soñaba con ser inventor, y ahora estoy haciendo realidad ese sueño cada día. Estudié Tecnología en Electrónica en la Universidad Distrital Francisco José de Caldas de Bogotá y actualmente soy un apasionado desarrollador fullstack enamorado de Rails.",
+            texto1: "Soy colombiano, nacido en un pueblo llamado Puerto Salgar. En la actualidad, trabajo como desarrollador de Ruby on Rails en Buk, una startup dedicada a solucionar las necesidades de las empresas en la gestión de personal. Me considero un \"Maker\" porque disfruto creando cosas. Desde pequeño, soñaba con ser inventor, y ahora estoy haciendo realidad ese sueño cada día. Estudié Tecnología en Electrónica en la Universidad Distrital Francisco José de Caldas de Bogotá y actualmente soy un apasionado desarrollador fullstack enamorado de Rails.",
             subtitulo2: "Me gusta...",
             texto2: "Mi vida abarca una variedad de intereses, desde compartir comidas con mi pareja hasta el desarrollo web y la participación en comunidades de Makers. También me apasiona el Internet de las cosas, la música, los videojuegos, la fotografía y la cocina. Estas actividades enriquecen mi vida y me permiten seguir aprendiendo y creciendo constantemente.",
             subtitulo3: "Gestores de Paz Potosí",

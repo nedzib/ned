@@ -58,7 +58,7 @@ export let en = {
         navButton: "About me",
         columna1: {
             subtitulo1: "Who am i?",
-            texto1: "I am a Colombian, born in a town called Puerto Salgar. Currently, I work as a Ruby on Rails developer at Buk, a company that aims to address businesses' needs in people management. I consider myself a Maker because I enjoy creating things. As a child, I always aspired to be an inventor, and now I am fulfilling that dream every day. I studied Electronics Technology at Universidad Distrital Francisco José de Caldas in Bogotá, and now I am a passionate full-stack developer with a love for Rails.",
+            texto1: "I am a Colombian, born in a town called Puerto Salgar. Currently, I work as a Ruby on Rails developer at Buk, a startup that aims to address businesses' needs in people management. I consider myself a Maker because I enjoy creating things. As a child, I always aspired to be an inventor, and now I am fulfilling that dream every day. I studied Electronics Technology at Universidad Distrital Francisco José de Caldas in Bogotá, and now I am a passionate full-stack developer with a love for Rails.",
             subtitulo2: "I like...",
             texto2: "My life encompasses a variety of interests, from sharing meals with my partner to web development and involvement in Makers communities. I'm also passionate about the Internet of Things, music, video games, photography, and cooking. These activities enrich my life and allow me to continue learning and growing constantly.",
             subtitulo3: "Gestores de Paz Potosí",
