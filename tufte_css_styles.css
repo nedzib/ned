@@ -47,10 +47,18 @@ body.tufte-terminal,
   display: none !important;
 }
 
+.tufte-terminal,
+.tufte-terminal *,
+.tufte-terminal *::before,
+.tufte-terminal *::after {
+  box-sizing: border-box;
+}
+
 .tufte-terminal article {
   max-width: 88rem;
   margin: 0 auto;
   padding: 4rem 2rem 6rem;
+  min-width: 0;
 }
 
 .tufte-terminal .blog-header {
@@ -58,6 +66,8 @@ body.tufte-terminal,
   margin-bottom: 1.5rem;
   display: grid;
   gap: 0.35rem;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .tufte-terminal .blog-home-link,
@@ -74,6 +84,7 @@ body.tufte-terminal,
 .tufte-terminal .blog-home-link {
   display: inline-block;
   width: fit-content;
+  max-width: 100%;
   color: var(--gb-dm-fg1);
   text-decoration-color: var(--blog-border);
   text-underline-offset: 0.14em;
@@ -87,6 +98,7 @@ body.tufte-terminal,
 .tufte-terminal .blog-actions {
   display: block;
   width: 100%;
+  min-width: 0;
 }
 
 .tufte-terminal .blog-actions a {
@@ -240,6 +252,7 @@ body.tufte-terminal,
 
 .tufte-terminal .post-article {
   width: min(100%, calc(var(--blog-measure) + var(--blog-margin-width) + 3rem));
+  min-width: 0;
 }
 
 .tufte-terminal .post-meta-banner {
@@ -249,6 +262,7 @@ body.tufte-terminal,
   width: min(100%, calc(var(--blog-measure) + 1rem));
   margin: 0 0 0.15rem;
   color: var(--gb-dm-fg3);
+  min-width: 0;
 }
 
 .tufte-terminal .post-meta-banner::after {
@@ -285,13 +299,6 @@ body.tufte-terminal,
 
 .tufte-terminal .post-content > :first-child {
   margin-top: 0;
-}
-
-.tufte-terminal .post-frame,
-.tufte-terminal .post-frame *,
-.tufte-terminal .post-content,
-.tufte-terminal .post-content * {
-  box-sizing: border-box;
 }
 
 .tufte-terminal .post-frame > *,
@@ -745,14 +752,20 @@ body.tufte-terminal,
 @media (max-width: 860px) {
   .tufte-terminal article {
     padding: 3rem 1.25rem 5rem;
+    overflow-x: clip;
   }
 
   .tufte-terminal {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .tufte-terminal .blog-shell {
     gap: 1.5rem;
+  }
+
+  .tufte-terminal .blog-header {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
   }
 
   .tufte-terminal .blog-index,
@@ -888,6 +901,8 @@ body.tufte-terminal,
 
   .tufte-terminal .blog-header {
     margin-bottom: 1.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .tufte-terminal .blog-index,
