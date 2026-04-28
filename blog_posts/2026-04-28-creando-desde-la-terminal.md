@@ -7,7 +7,7 @@ summary: Cómo uso terminal, Claude Code, worktrees, tmux y scripting para conve
 
 Actualmente tenemos herramientas en terminal que realmente hacen casi todo nuestro trabajo: escribir código, analizar propuestas, etc. Además, se impulsa el uso continuo del agente. Como resultado de esa búsqueda de que el agente sea más independiente, aprenda y cada día pueda ser más oneshot, la terminal adquirió un papel aún más protagónico del que ya tenía.
 
-En el resto del texto exploraremos [Review Inator](https://github.com/nedzib/review-inator), una implementación muy sencilla que potencia el uso tanto de la terminal como de Claude Code.
+En el resto del texto exploraremos [Review Inator](https://github.com/nedzib/review_inator), una implementación muy sencilla que potencia el uso tanto de la terminal como de Claude Code.
 
 ## Scripting y Claude Code
 Hace poco veía un video de Nate Gentile en donde colocaba una webcam viendo una pared donde estaba Claude Code arreglando el blending de dos videobeams con la instrucción de que Claude se realimentara tomando capturas de la webcam. Eso me pareció una genialidad; más que la acción en sí misma, porque me recordó que literalmente podemos hacer cualquier cosa. {{mn: A veces nosotros mismos nos ponemos límites sin querer, al vivir el día a día pensando solo en cómo entregar lo que necesitamos en lugar de cómo hacer que mi trabajo sea más fácil.}}

@@ -155,6 +155,7 @@
             </div>
           </article>
         `;
+        enhanceCodeBlocks();
       })
       .catch((error) => {
         contentEl.innerHTML = `
@@ -290,6 +291,68 @@
     const left = new Date(`${a.date || "1970-01-01"}T00:00:00`).getTime();
     const right = new Date(`${b.date || "1970-01-01"}T00:00:00`).getTime();
     return right - left;
+  }
+
+  function enhanceCodeBlocks() {
+    const blocks = contentEl.querySelectorAll("pre > code");
+
+    blocks.forEach((codeBlock) => {
+      if (window.hljs) {
+        window.hljs.highlightElement(codeBlock);
+      }
+
+      const pre = codeBlock.parentElement;
+      if (!pre || pre.dataset.enhanced === "true") {
+        return;
+      }
+
+      pre.dataset.enhanced = "true";
+
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "code-copy-button";
+      button.textContent = "COPY";
+
+      button.addEventListener("click", async () => {
+        try {
+          await copyText(codeBlock.textContent || "");
+          button.textContent = "COPIED";
+          window.setTimeout(() => {
+            button.textContent = "COPY";
+          }, 1200);
+        } catch {
+          button.textContent = "FAILED";
+          window.setTimeout(() => {
+            button.textContent = "COPY";
+          }, 1200);
+        }
+      });
+
+      pre.appendChild(button);
+    });
+  }
+
+  async function copyText(value) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+
+    const textarea = document.createElement("textarea");
+    textarea.value = value;
+    textarea.setAttribute("readonly", "");
+    textarea.style.position = "absolute";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
+
+    const copied = document.execCommand("copy");
+    document.body.removeChild(textarea);
+
+    if (!copied) {
+      throw new Error("Copy command failed");
+    }
   }
 
   function escapeHtml(value) {

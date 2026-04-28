@@ -491,12 +491,93 @@ body.tufte-terminal,
   background: var(--blog-bg-soft);
   border: 1px solid var(--blog-accent-soft);
   color: var(--blog-text);
+  position: relative;
 }
 
 .tufte-terminal pre code {
   background: transparent;
   border: 0;
   padding: 0;
+  display: block;
+  padding-top: 1rem;
+}
+
+.tufte-terminal .code-copy-button {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 80%, var(--blog-bg) 20%);
+  color: var(--blog-text-muted);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.18rem 0.45rem;
+  line-height: 1.2;
+  font-family: var(--blog-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.tufte-terminal .code-copy-button:hover {
+  color: var(--blog-accent);
+  border-color: var(--blog-accent);
+  background: color-mix(in srgb, var(--blog-bg-soft) 65%, var(--blog-bg) 35%);
+}
+
+.tufte-terminal .code-copy-button:focus,
+.tufte-terminal .code-copy-button:focus-visible {
+  outline: none;
+  border-color: var(--blog-accent);
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .hljs {
+  color: var(--blog-text);
+}
+
+.tufte-terminal .hljs-comment,
+.tufte-terminal .hljs-quote {
+  color: var(--blog-text-muted);
+  font-style: italic;
+}
+
+.tufte-terminal .hljs-keyword,
+.tufte-terminal .hljs-selector-tag,
+.tufte-terminal .hljs-literal,
+.tufte-terminal .hljs-section,
+.tufte-terminal .hljs-link {
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .hljs-string,
+.tufte-terminal .hljs-attr,
+.tufte-terminal .hljs-attribute,
+.tufte-terminal .hljs-template-tag {
+  color: var(--blog-accent-soft);
+}
+
+.tufte-terminal .hljs-number,
+.tufte-terminal .hljs-symbol,
+.tufte-terminal .hljs-bullet,
+.tufte-terminal .hljs-variable,
+.tufte-terminal .hljs-template-variable {
+  color: var(--blog-link);
+}
+
+.tufte-terminal .hljs-title,
+.tufte-terminal .hljs-title.class_,
+.tufte-terminal .hljs-title.function_ {
+  color: var(--gb-dm-fg0);
+}
+
+.tufte-terminal .hljs-built_in,
+.tufte-terminal .hljs-type {
+  color: var(--gb-dm-light-orange, #f38019);
 }
 
 .tufte-terminal figure {
