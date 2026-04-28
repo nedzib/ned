@@ -17,7 +17,7 @@
     breaks: false,
   });
 
-  fetch(manifestPath)
+  fetch(manifestPath, { cache: "no-store" })
     .then((response) => {
       if (!response.ok) throw new Error("Could not load post index");
       return response.json();
@@ -185,7 +185,7 @@
   }
 
   function fetchMarkdownCandidate(candidate) {
-    return fetch(encodeURI(candidate))
+    return fetch(encodeURI(candidate), { cache: "no-store" })
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Could not load markdown from ${candidate}`);
