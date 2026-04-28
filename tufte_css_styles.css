@@ -1,0 +1,845 @@
+/* Tufte-inspired blog stylesheet adapted to this repo's terminal palette. */
+
+:root {
+  --gb-dm-bg0: #282828;
+  --gb-dm-bg0-hard: #1d2021;
+  --gb-dm-bg0-soft: #32302f;
+  --gb-dm-bg1: #3c3836;
+  --gb-dm-bg2: #504945;
+  --gb-dm-bg3: #665c54;
+  --gb-dm-fg0: #fbf1c7;
+  --gb-dm-fg1: #ebdbb2;
+  --gb-dm-fg3: #bdae93;
+  --gb-dm-light-yellow: #fabd2f;
+  --gb-dm-light-green: #b8bb26;
+  --gb-dm-light-blue: #83a598;
+  --gb-dm-light-red: #fb4934;
+
+  --blog-bg: var(--gb-dm-bg0-hard);
+  --blog-bg-soft: var(--gb-dm-bg0-soft);
+  --blog-border: var(--gb-dm-bg2);
+  --blog-text: var(--gb-dm-fg1);
+  --blog-text-muted: var(--gb-dm-fg3);
+  --blog-accent: var(--gb-dm-light-yellow);
+  --blog-accent-soft: var(--gb-dm-light-green);
+  --blog-link: var(--gb-dm-light-blue);
+  --blog-danger: var(--gb-dm-light-red);
+  --blog-measure: 42rem;
+  --blog-margin-width: 19rem;
+  --blog-font: Iowan Old Style, Palatino Linotype, Book Antiqua, Georgia, serif;
+  --blog-mono: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+html {
+  font-size: 17px;
+}
+
+body.tufte-terminal,
+.tufte-terminal {
+  margin: 0;
+  background: var(--blog-bg);
+  color: var(--blog-text);
+  font-family: var(--blog-font);
+  counter-reset: sidenote-counter;
+}
+
+.tufte-terminal [hidden] {
+  display: none !important;
+}
+
+.tufte-terminal article {
+  max-width: 88rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.tufte-terminal .blog-header {
+  width: min(100%, var(--blog-measure));
+  margin-bottom: 1.5rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.tufte-terminal .blog-home-link,
+.tufte-terminal .blog-kicker,
+.tufte-terminal .post-meta,
+.tufte-terminal .blog-note {
+  color: var(--blog-text-muted);
+  font-family: var(--blog-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tufte-terminal .blog-home-link {
+  display: inline-block;
+  width: fit-content;
+  color: var(--gb-dm-fg1);
+  text-decoration-color: var(--blog-border);
+  text-underline-offset: 0.14em;
+}
+
+.tufte-terminal .blog-home-link:hover {
+  color: var(--blog-accent);
+  text-decoration-color: var(--blog-accent);
+}
+
+.tufte-terminal .blog-actions {
+  display: block;
+  width: 100%;
+}
+
+.tufte-terminal .blog-actions a {
+  display: inline-block;
+  width: fit-content;
+  color: var(--blog-text);
+  text-decoration-color: var(--blog-border);
+}
+
+.tufte-terminal .blog-shell {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+  grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr);
+}
+
+.tufte-terminal .blog-shell.is-post-view {
+  display: block;
+  gap: 0;
+  padding-top: 0;
+}
+
+.tufte-terminal .blog-shell.is-post-view > #blog-content {
+  margin-top: 0;
+}
+
+.tufte-terminal .blog-index {
+  width: 100%;
+  min-width: 0;
+  padding: 1.2rem 1rem 1.4rem;
+  border: 1px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 35%, var(--blog-bg) 65%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.03);
+  box-sizing: border-box;
+}
+
+.tufte-terminal .post-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.tufte-terminal .post-list-item {
+  padding: 1rem 0;
+  border-top: 1px solid var(--blog-border);
+}
+
+.tufte-terminal .post-list-item.is-active a {
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .post-list-item p {
+  margin: 0.4rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.tufte-terminal .post-list-item:first-child {
+  padding-top: 1.15rem;
+}
+
+.tufte-terminal #blog-content {
+  width: 100%;
+  min-width: 0;
+}
+
+.tufte-terminal .blog-landing {
+  display: grid;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.tufte-terminal .blog-listing {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.tufte-terminal .listing-frame {
+  width: 100%;
+  min-width: 0;
+  padding: 1.1rem 1rem 1.2rem;
+  border: 1px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 35%, var(--blog-bg) 65%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.03);
+  box-sizing: border-box;
+}
+
+.tufte-terminal .listing-frame .post-meta {
+  margin: 0 0 0.55rem;
+}
+
+.tufte-terminal .listing-frame h2 {
+  width: 100%;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.tufte-terminal .listing-frame p:last-child {
+  margin-bottom: 0;
+}
+
+.tufte-terminal .landing-frame {
+  width: 100%;
+  min-width: 0;
+  padding: 1.2rem 1rem 1.4rem;
+  border: 1px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 35%, var(--blog-bg) 65%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.03);
+  box-sizing: border-box;
+}
+
+.tufte-terminal .landing-eyebrow {
+  margin: 0 0 0.6rem;
+  color: var(--gb-dm-fg3);
+  font-family: var(--blog-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tufte-terminal .landing-intro h1,
+.tufte-terminal .landing-latest h2 {
+  width: 100%;
+  margin-top: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.tufte-terminal .landing-intro h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .landing-latest h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.tufte-terminal .landing-latest .post-meta {
+  margin: 0 0 0.85rem;
+}
+
+.tufte-terminal .landing-latest p:last-child {
+  margin-bottom: 0;
+}
+
+.tufte-terminal .post-header {
+  margin-bottom: 2rem;
+}
+
+.tufte-terminal .post-article {
+  width: min(100%, calc(var(--blog-measure) + var(--blog-margin-width) + 3rem));
+}
+
+.tufte-terminal .post-meta-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(100%, calc(var(--blog-measure) + 1rem));
+  margin: 0 0 0.15rem;
+  color: var(--gb-dm-fg3);
+}
+
+.tufte-terminal .post-meta-banner::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--blog-border);
+}
+
+.tufte-terminal .post-frame {
+  width: min(100%, var(--blog-measure));
+  padding: 1.4rem 1rem 2rem;
+  border: 1px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 35%, var(--blog-bg) 65%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.03);
+}
+
+.tufte-terminal .post-header h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .post-header .subtitle {
+  margin-bottom: 0;
+  color: var(--gb-dm-fg3);
+  font-size: 1.2rem;
+  overflow-wrap: anywhere;
+}
+
+.tufte-terminal .post-content {
+  padding-top: 1.2rem;
+}
+
+.tufte-terminal .post-content > :first-child {
+  margin-top: 0;
+}
+
+.tufte-terminal .post-frame,
+.tufte-terminal .post-frame *,
+.tufte-terminal .post-content,
+.tufte-terminal .post-content * {
+  box-sizing: border-box;
+}
+
+.tufte-terminal .post-frame > *,
+.tufte-terminal .post-content > *,
+.tufte-terminal .post-content > * > * {
+  max-width: 100%;
+}
+
+.tufte-terminal .post-header,
+.tufte-terminal .post-content,
+.tufte-terminal .post-content p,
+.tufte-terminal .post-content ul,
+.tufte-terminal .post-content ol,
+.tufte-terminal .post-content dl,
+.tufte-terminal .post-content blockquote,
+.tufte-terminal .post-content pre,
+.tufte-terminal .post-content table,
+.tufte-terminal .post-content figure,
+.tufte-terminal .post-content .subtitle,
+.tufte-terminal .post-content h2,
+.tufte-terminal .post-content h3,
+.tufte-terminal .post-content hr,
+.tufte-terminal .blog-nav {
+  width: 100%;
+}
+
+.tufte-terminal .post-content ul,
+.tufte-terminal .post-content ol {
+  padding-left: 1.25rem;
+}
+
+.tufte-terminal .post-content blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tufte-terminal .post-content pre {
+  overflow-x: auto;
+}
+
+.tufte-terminal .blog-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--blog-border);
+}
+
+.tufte-terminal section {
+  padding: 1.5rem 0;
+}
+
+.tufte-terminal h1,
+.tufte-terminal h2,
+.tufte-terminal h3,
+.tufte-terminal p,
+.tufte-terminal ul,
+.tufte-terminal ol,
+.tufte-terminal dl,
+.tufte-terminal blockquote,
+.tufte-terminal pre,
+.tufte-terminal table,
+.tufte-terminal figure,
+.tufte-terminal .subtitle {
+  width: min(100%, var(--blog-measure));
+}
+
+.tufte-terminal h1,
+.tufte-terminal h2,
+.tufte-terminal h3 {
+  font-weight: 400;
+  line-height: 1.1;
+  margin-left: 0;
+  color: var(--gb-dm-fg0);
+}
+
+.tufte-terminal h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+}
+
+.tufte-terminal .subtitle {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  color: var(--blog-text-muted);
+  font-style: italic;
+  font-size: 1.35rem;
+}
+
+.tufte-terminal h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--blog-accent);
+}
+
+.tufte-terminal h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  color: var(--blog-accent-soft);
+}
+
+.tufte-terminal p,
+.tufte-terminal li,
+.tufte-terminal dt,
+.tufte-terminal dd,
+.tufte-terminal blockquote {
+  font-size: 1.2rem;
+  line-height: 1.9;
+}
+
+.tufte-terminal p,
+.tufte-terminal ul,
+.tufte-terminal ol,
+.tufte-terminal dl,
+.tufte-terminal pre,
+.tufte-terminal table,
+.tufte-terminal blockquote,
+.tufte-terminal figure {
+  margin-top: 1.35rem;
+  margin-bottom: 1.35rem;
+}
+
+.tufte-terminal ul,
+.tufte-terminal ol {
+  padding-left: 1.5rem;
+}
+
+.tufte-terminal li + li,
+.tufte-terminal dt + dt {
+  margin-top: 0.35rem;
+}
+
+.tufte-terminal a {
+  color: var(--blog-link);
+  text-decoration-color: var(--blog-accent);
+  text-underline-offset: 0.12em;
+}
+
+.tufte-terminal a:hover {
+  color: var(--blog-accent);
+}
+
+.tufte-terminal hr {
+  width: var(--blog-measure);
+  max-width: 100%;
+  border: 0;
+  border-top: 1px dashed var(--blog-border);
+  margin: 2rem 0;
+}
+
+.tufte-terminal blockquote {
+  border-left: 2px solid var(--blog-border);
+  padding-left: 1.25rem;
+  color: var(--blog-text-muted);
+}
+
+.tufte-terminal blockquote footer {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  color: var(--blog-text);
+}
+
+.tufte-terminal .epigraph {
+  margin: 3rem 0;
+}
+
+.tufte-terminal .epigraph blockquote {
+  font-style: italic;
+}
+
+.tufte-terminal .newthought {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+  color: var(--blog-accent);
+}
+
+.tufte-terminal code,
+.tufte-terminal pre {
+  font-family: var(--blog-mono);
+}
+
+.tufte-terminal code {
+  background: var(--blog-bg-soft);
+  border: 1px solid var(--blog-border);
+  border-radius: 2px;
+  padding: 0.08rem 0.35rem;
+  font-size: 0.95rem;
+}
+
+.tufte-terminal pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background: var(--blog-bg-soft);
+  border: 1px solid var(--blog-accent-soft);
+  color: var(--blog-text);
+}
+
+.tufte-terminal pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.tufte-terminal figure {
+  margin-left: 0;
+}
+
+.tufte-terminal img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--blog-border);
+}
+
+.tufte-terminal figcaption {
+  width: min(100%, 14rem);
+  float: right;
+  clear: right;
+  margin-right: calc(var(--blog-margin-width) * -1);
+  color: var(--blog-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tufte-terminal figure.fullwidth,
+.tufte-terminal .fullwidth {
+  width: 100%;
+  max-width: 100%;
+}
+
+.tufte-terminal input.margin-toggle {
+  display: none;
+}
+
+.tufte-terminal .sidenote,
+.tufte-terminal .marginnote {
+  float: right;
+  clear: right;
+  width: var(--blog-margin-width);
+  margin-right: calc(var(--blog-margin-width) * -1 - 2.75rem);
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+  color: var(--blog-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  padding: 1rem 1.25rem;
+  border-left: 2px solid var(--blog-border);
+  background: color-mix(in srgb, var(--blog-bg-soft) 60%, var(--blog-bg) 40%);
+}
+
+.tufte-terminal .sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+.tufte-terminal .sidenote-number::after,
+.tufte-terminal .sidenote::before {
+  color: var(--blog-accent);
+  font-family: var(--blog-mono);
+  font-size: 0.8rem;
+  position: relative;
+  vertical-align: super;
+  font-weight: 700;
+}
+
+.tufte-terminal .sidenote-number::after {
+  content: counter(sidenote-counter);
+  margin-left: 0.1rem;
+}
+
+.tufte-terminal .sidenote::before {
+  content: counter(sidenote-counter) " ";
+}
+
+.tufte-terminal .post-content p,
+.tufte-terminal .post-content li,
+.tufte-terminal .post-content blockquote {
+  color: var(--gb-dm-fg1);
+  overflow-wrap: anywhere;
+}
+
+.tufte-terminal .post-content h2,
+.tufte-terminal .post-content h3 {
+  color: var(--blog-accent);
+}
+
+.tufte-terminal label.margin-toggle {
+  cursor: pointer;
+}
+
+.tufte-terminal label.margin-toggle:not(.sidenote-number) {
+  display: none;
+  color: var(--blog-accent);
+}
+
+.tufte-terminal table {
+  border-collapse: collapse;
+}
+
+.tufte-terminal th,
+.tufte-terminal td {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--blog-border);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.tufte-terminal th {
+  color: var(--blog-accent);
+}
+
+.tufte-terminal .danger {
+  color: var(--blog-danger);
+}
+
+.tufte-terminal .sans {
+  font-family: Inter, Helvetica Neue, Arial, sans-serif;
+}
+
+.tufte-terminal .table-wrapper,
+.tufte-terminal .iframe-wrapper {
+  width: min(100%, var(--blog-measure));
+}
+
+.tufte-terminal .iframe-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.tufte-terminal .iframe-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1100px) {
+  .tufte-terminal article {
+    max-width: 48rem;
+    padding-inline: 1.5rem;
+  }
+
+  .tufte-terminal .blog-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .tufte-terminal .post-article {
+    width: 100%;
+  }
+
+  .tufte-terminal .blog-header,
+  .tufte-terminal .blog-index,
+  .tufte-terminal #blog-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tufte-terminal figcaption,
+  .tufte-terminal .sidenote,
+  .tufte-terminal .marginnote {
+    width: 14rem;
+    margin-right: -15rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .tufte-terminal article {
+    padding: 3rem 1.25rem 5rem;
+  }
+
+  .tufte-terminal {
+    overflow-x: hidden;
+  }
+
+  .tufte-terminal .blog-shell {
+    gap: 1.5rem;
+  }
+
+  .tufte-terminal .blog-index,
+  .tufte-terminal .landing-frame,
+  .tufte-terminal .listing-frame {
+    padding: 1rem 0.9rem 1.15rem;
+  }
+
+  .tufte-terminal .post-meta-banner,
+  .tufte-terminal .post-frame {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tufte-terminal .post-frame {
+    padding: 1.2rem 0.9rem 1.5rem;
+  }
+
+  .tufte-terminal .post-header h2 {
+    font-size: clamp(1.9rem, 7vw, 2.5rem);
+  }
+
+  .tufte-terminal .post-header .subtitle,
+  .tufte-terminal .subtitle {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .tufte-terminal .landing-intro h1 {
+    font-size: clamp(1.9rem, 7vw, 2.4rem);
+  }
+
+  .tufte-terminal .landing-latest h2 {
+    font-size: clamp(1.5rem, 6vw, 1.9rem);
+  }
+
+  .tufte-terminal .blog-nav,
+  .tufte-terminal .blog-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tufte-terminal .blog-actions {
+    display: block;
+  }
+
+  .tufte-terminal .blog-nav span {
+    width: 100%;
+  }
+
+  .tufte-terminal .blog-nav a,
+  .tufte-terminal .blog-actions a {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .tufte-terminal h1,
+  .tufte-terminal h2,
+  .tufte-terminal h3,
+  .tufte-terminal p,
+  .tufte-terminal ul,
+  .tufte-terminal ol,
+  .tufte-terminal dl,
+  .tufte-terminal blockquote,
+  .tufte-terminal pre,
+  .tufte-terminal table,
+  .tufte-terminal figure,
+  .tufte-terminal .subtitle,
+  .tufte-terminal .table-wrapper,
+  .tufte-terminal .iframe-wrapper,
+  .tufte-terminal hr {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tufte-terminal p,
+  .tufte-terminal li,
+  .tufte-terminal dt,
+  .tufte-terminal dd,
+  .tufte-terminal blockquote {
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .tufte-terminal h1 {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+  }
+
+  .tufte-terminal h2 {
+    font-size: clamp(1.7rem, 6vw, 2rem);
+  }
+
+  .tufte-terminal h3 {
+    font-size: clamp(1.25rem, 5vw, 1.4rem);
+  }
+
+  .tufte-terminal figcaption {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.75rem;
+  }
+
+  .tufte-terminal label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+  }
+
+  .tufte-terminal .sidenote,
+  .tufte-terminal .marginnote {
+    display: none;
+    float: none;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.9rem 1rem;
+    border-left: 2px solid var(--blog-accent);
+    background: var(--blog-bg-soft);
+  }
+
+  .tufte-terminal .margin-toggle:checked + .sidenote,
+  .tufte-terminal .margin-toggle:checked + .marginnote {
+    display: block;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 16px;
+  }
+
+  .tufte-terminal article {
+    padding: 2rem 0.85rem 4rem;
+  }
+
+  .tufte-terminal .blog-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .tufte-terminal .blog-index,
+  .tufte-terminal .landing-frame,
+  .tufte-terminal .listing-frame {
+    padding: 0.9rem 0.75rem 1rem;
+  }
+
+  .tufte-terminal .post-meta-banner {
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+  }
+
+  .tufte-terminal .post-frame {
+    padding: 1rem 0.75rem 1.25rem;
+  }
+
+  .tufte-terminal .post-content ul,
+  .tufte-terminal .post-content ol,
+  .tufte-terminal ul,
+  .tufte-terminal ol {
+    padding-left: 1rem;
+  }
+
+  .tufte-terminal .sidenote,
+  .tufte-terminal .marginnote {
+    padding: 0.8rem 0.85rem;
+    font-size: 0.92rem;
+  }
+
+  .tufte-terminal th,
+  .tufte-terminal td {
+    padding: 0.55rem 0.6rem;
+  }
+}

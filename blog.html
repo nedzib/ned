@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nedzib Notes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <link rel="stylesheet" href="tufte_css_styles.css" />
+  </head>
+
+  <body class="tufte-terminal">
+    <article>
+      <header class="blog-header">
+        <a href="./index.html" class="blog-home-link">Nedzib Sastoque</a>
+        <nav class="blog-actions" aria-label="Primary navigation" hidden>
+          <a href="./blog.html">&larr; All posts</a>
+        </nav>
+      </header>
+
+      <section class="blog-shell">
+        <aside class="blog-index" aria-labelledby="blog-index-title">
+          <h2 id="blog-index-title">Posts</h2>
+          <p class="blog-note">
+            Archive
+          </p>
+          <div id="post-list"></div>
+        </aside>
+
+        <main id="blog-content" aria-live="polite">
+          <p>Loading post index...</p>
+        </main>
+      </section>
+    </article>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./blog.js"></script>
+  </body>
+</html>
