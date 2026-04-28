@@ -185,7 +185,7 @@
   }
 
   function fetchMarkdownCandidate(candidate) {
-    return fetch(candidate)
+    return fetch(encodeURI(candidate))
       .then((response) => {
         if (!response.ok) {
           throw new Error(`Could not load markdown from ${candidate}`);
