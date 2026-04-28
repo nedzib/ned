@@ -9,7 +9,9 @@ Static personal site and blog.
 - `blog.html`: blog index and post viewer
 - `blog.js`: client-side markdown loader and post navigation
 - `tufte_css_styles.css`: blog styles
-- `blog_posts/`: markdown posts plus `index.json`
+- `blog_posts/`: markdown posts plus generated `index.json`
+- `scripts/sync_obsidian_blog.sh`: syncs posts from Obsidian into this repo
+- `scripts/generate_blog_index.py`: rebuilds `blog_posts/index.json` from frontmatter
 
 ## Run locally
 
@@ -23,21 +25,23 @@ Then open `http://127.0.0.1:8000/blog.html`.
 
 ## Add a blog post
 
-1. Create a new markdown file in `blog_posts/`.
-2. Add a matching entry to `blog_posts/index.json`.
-3. Use a newer `date` if you want it to appear first; posts are sorted descending by date.
+1. Write the post in your Obsidian blog folder.
+2. Add frontmatter with `title`, `date`, and optional `summary`.
+3. Sync the markdown files into this repo and regenerate the manifest:
 
-Example index entry:
-
-```json
-{
-  "slug": "my-new-post",
-  "title": "My New Post",
-  "date": "2026-04-30",
-  "summary": "One-line summary for the listing.",
-  "file": "blog_posts/my-new-post.md"
-}
+```bash
+sh scripts/sync_obsidian_blog.sh
 ```
+
+The sync script copies `.md` files from the Obsidian blog folder into `blog_posts/` and then regenerates `blog_posts/index.json` automatically.
+
+If you ever need to override the source folder temporarily:
+
+```bash
+OBSIDIAN_BLOG_DIR="/path/to/other/folder" sh scripts/sync_obsidian_blog.sh
+```
+
+Posts are sorted descending by `date`. The generator uses the filename as the base for the `slug`.
 
 Example post frontmatter:
 
@@ -47,6 +51,12 @@ title: "My New Post"
 date: "2026-04-30"
 summary: "One-line summary for the listing."
 ---
+```
+
+Example filename:
+
+```text
+2026-04-30 My New Post.md
 ```
 
 ## Extra blog syntax
